@@ -1,0 +1,471 @@
+/* GLOBAL*/
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+
+:root {
+    font-family: 'Mulish', sans-serif;
+    font-size: 62.5%;
+
+    /* COLORS */
+    --gray-bg: #F9F4FB;
+    --gradient-bg: linear-gradient(134deg, #343193 0%, #302C63 100%);
+    --title-cl: #B52184;
+    --text-cl: #312D64;
+    --white-cl: #FFFFFF;
+    --box-shadow: 0px 3.31077px 13.24308px 0px rgba(0, 0, 0, 0.25);
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: normal;
+    font-weight: 600;
+
+    color: var(--text-cl);
+
+    background: var(--gray-bg);
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+h1,
+h2,
+legend {
+    color: var(--title-cl);
+    font-weight: 900;
+}
+
+input,
+textarea {
+    width: 100%;
+}
+
+/* HEADER */
+header .logo {
+    margin: 0 3.4rem 1.7rem 3.2rem;
+
+    animation: topdown 700ms 350ms backwards;
+}
+
+header .title {
+    animation: downtop 700ms 350ms backwards;
+}
+
+header .title h1 {
+    font-size: 3.2rem;
+    text-align: center;
+}
+
+header .title p {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+header .title .arrow-down {
+    height: 10.5rem;
+    width: 5.9rem;
+    margin: 0 auto 9.3rem auto;
+}
+
+/* MAIN - CARDS */
+
+main #cards {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-shrink: 0;
+
+    background: var(--gradient-bg);
+    padding: 5.3rem 4rem;
+}
+
+#cards .card {
+
+    padding: 2.6486rem;
+
+    background: var(--white-cl);
+
+
+
+    border-radius: 1.9865rem;
+    box-shadow: var(--box-shadow)
+}
+
+#cards .moon {
+    height: 8rem;
+    width: 8rem;
+    margin-bottom: 3.3rem;
+}
+
+main h2 {
+    font-size: 2.92rem;
+    margin-bottom: 1.9rem;
+}
+
+/* MAIN - CONTACT */
+
+#contact {
+    padding: 7.8rem 3.9rem 6.5rem 4.3rem;
+}
+
+#contact fieldset {
+    border: none;
+}
+
+#contact legend {
+    font-size: 3.2rem;
+    margin-bottom: 4.3rem;
+}
+
+#contact .input-wrapper {
+    margin-bottom: 2.4rem;
+}
+
+#contact form input,
+#contact form textarea {
+    font-size: 1.6rem;
+    border-radius: 1.6rem;
+    border: 1.5px solid #312D64;
+}
+
+#contact form input {
+    padding: 1.2rem 1.6rem 1.2rem 4rem;
+}
+
+#contact form textarea {
+    padding: 1.6rem;
+    background: none;
+}
+
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+    font-size: 1.6rem;
+    color: var(--text-cl);
+}
+
+#name {
+    background: url("./assets/person.svg") no-repeat 1.2rem;
+}
+
+#email {
+    background: url("./assets/at.svg") no-repeat 1.2rem;
+}
+
+#contact .button {
+    background: var(--gradient-bg);
+    padding: 1.6rem;
+
+    border: 1px solid var(--gradient-bg);
+    border-radius: 1.6rem;
+
+    color: var(--white-cl);
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: filter 200ms;
+}
+
+#contact .button:hover {
+    filter: brightness(0.9);
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 7.8rem;
+    background: var(--gradient-bg);
+}
+
+footer p {
+    color: var(--white-cl);
+    font-size: 1.9rem;
+}
+
+/* @media */
+
+@media (min-width: 768px) {
+
+    header .logo {
+        width: 60%;
+        margin: 0 auto 2rem auto;
+    }
+
+    header .title h1 {
+        font-size: 4rem;
+    }
+
+    header .title p {
+        font-size: 2.5rem;
+    }
+
+    #cards .card {
+        max-width: 80%;
+    }
+
+    #contact form {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+
+}
+
+@media (min-width: 1024px) {
+
+    /* HEADER */
+    header {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0.9rem 8.3rem 6%;
+    }
+
+    header .logo {
+        animation: rigthleft 700ms 350ms backwards;
+    }
+
+    header .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        height: 100%;
+        animation: leftrigth 700ms 350ms backwards;
+    }
+
+    header .title h1 {
+        font-size: 3.5rem;
+        flex: 2;
+    }
+
+    header .title p {
+        font-size: 2.2rem;
+        margin: 0;
+        flex: 2;
+    }
+
+
+
+    header .title .arrow-down {
+        position: absolute;
+        top: 45rem;
+    }
+
+    /* MAIN - CARDS */
+
+    main #cards {
+        display: flex;
+        flex-direction: row;
+        gap: 2.5rem;
+
+        padding: 6.4rem 6%;
+    }
+
+    main #cards .card {
+        width: 100%;
+        height: 42rem;
+    }
+
+    /* MAIN - CONTACT */
+
+    main #contact {
+        display: flex;
+        align-items: center;
+        gap: 7rem;
+
+        background: url("./assets/stars.svg") no-repeat;
+        height: 61rem;
+
+        background-position: right;
+        padding-top: 9.8rem;
+        padding-bottom: 10.4rem;
+        margin: 0 auto;
+    }
+
+    #contact form {
+
+
+        flex: 1;
+    }
+
+    #contact .container {
+        display: flex;
+        width: 144rem;
+        margin: 0 auto;
+        padding-left: 3%;
+    }
+
+    #contact .stars {
+        flex: 1;
+
+    }
+
+
+}
+
+
+@media (min-width: 1440px) {
+
+    /* HEADER */
+    header {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0 10.4rem 6.5%;
+        max-width: 144rem;
+        margin: 0 auto;
+    }
+
+    header .logo {
+        width: 55%;
+        margin: 0 auto;
+    }
+
+    header .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    header .title h1 {
+        font-size: 5.8rem;
+        text-align: start;
+    }
+
+    header .title p {
+        font-size: 3.2rem;
+        text-align: start;
+    }
+
+
+
+    header .title .arrow-down {
+        position: absolute;
+        top: 60rem;
+    }
+
+    /* MAIN - CARDS */
+
+    main #cards {
+        display: flex;
+        flex-direction: row;
+        gap: 6rem;
+        align-items: center;
+        justify-content: center;
+        padding: 6.4rem 6%;
+    }
+
+    main #cards .card {
+        width: 38.4rem;
+        height: 42rem;
+    }
+
+    /* MAIN - CONTACT */
+
+    main #contact {
+        display: flex;
+        align-items: center;
+        gap: 7rem;
+
+        background: url("./assets/stars.svg") no-repeat;
+        height: 61rem;
+        background-position: right;
+        padding-top: 9.8rem;
+        padding-bottom: 10.4rem;
+        margin: 0 auto;
+
+
+    }
+
+    #contact form {
+        flex: 1;
+    }
+
+    #contact .container {
+        display: flex;
+        width: 144rem;
+        margin: 0 auto;
+        padding-left: 3%;
+    }
+
+    #contact .stars {
+        flex: 1;
+
+    }
+}
+
+/*Animação CSS*/
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop {
+
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes leftrigth {
+    0% {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes rigthleft {
+
+    0% {
+        opacity: 0;
+        transform: translateX(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
